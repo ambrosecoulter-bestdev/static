@@ -18,7 +18,7 @@ var urlpath = window.location.pathname;
 
 //INITIAL CONFIGURATION
 //INCLUDE PARAMETERS "?initialiseconfiguration=yes&baselang=<SITESBASELANGUAGE>"
-var url = "https://autotranslaterapp.bubbleapps.io/version-test/api/1.1/wf/initialconfiguration";
+var url = "https://autotranslaterapp.bubbleapps.io/api/1.1/wf/initialconfiguration";
 
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.querySelector('head').innerHTML += styletag;
     var xhr = new XMLHttpRequest();
     var availlangs = [];
-    var availlangsurl = "https://autotranslaterapp.bubbleapps.io/version-test/api/1.1/wf/getavailablelang";
+    var availlangsurl = "https://autotranslaterapp.bubbleapps.io/api/1.1/wf/getavailablelang";
     var langsdata = JSON.stringify({projectuid: projectid, url: urlpath});
     console.log(urlpath);
     xhr.open("POST", availlangsurl);
@@ -121,7 +121,7 @@ if (window.location.search.indexOf('initialiseconfiguration=yes') > -1) {
 
 
 
-var retreivetranslation = "https://autotranslaterapp.bubbleapps.io/version-test/api/1.1/wf/gettranslation";
+var retreivetranslation = "https://autotranslaterapp.bubbleapps.io/api/1.1/wf/gettranslation";
 if (window.location.search.indexOf('lang=') > -1) {
     
     var xhr = new XMLHttpRequest();
